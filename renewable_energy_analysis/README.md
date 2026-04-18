@@ -90,7 +90,3 @@ jupyter notebook
 ## 📬 Feedback
 
 Feel free to open issues or suggest improvements.
-
----
-
-⭐ If you found this project useful, consider giving it a star!
