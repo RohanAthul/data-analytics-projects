@@ -114,17 +114,18 @@ Price Spread = [Max Market Price] - [Min Market Price]
 ---
 
 ## 📁 Repository Structure
-
 ```
-📦 electric_vehicle_dataset_2024_powerbi
- ┣ 📊 dashboard.pbix       # Main Power BI file
- ┣ 📄 ev_dataset.csv          # Source dataset
+ev-powerbi-dashboard
+ ┣ 📊 dashboard.pbix        # Main Power BI file
+ ┣ 📁 data
+ ┃ ┗ 📄 cars_data_cleaned.xlsx      # Source dataset
+ ┣ 📁 images
+ ┃ ┗ 🖼️ page1_market_overview.png      # Dashboard preview images
  ┗ 📝 README.md
 ```
-
 ---
 
 ## 🙋 Author
 
-Built by **[Your Name]** as part of a data analytics portfolio.  
-Feel free to connect on [LinkedIn](#) or explore more projects on [GitHub](#).
+Built by **Athul Rohan** as part of a data analytics portfolio.  
+Data from Kaggle: https://www.kaggle.com/datasets/urvishahir/electric-vehicle-specifications-dataset-2025
