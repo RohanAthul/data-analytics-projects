@@ -22,7 +22,7 @@ The dataset covers a range of EV models with the following fields:
 |--------|-------------|
 | `Brand` / `Model` | Vehicle identity |
 | `Battery` | Battery capacity (kWh) |
-| `KM_of_range` | Price per km of range (€) — combines affordability and range; lower is better |
+| `RangeValue` | Price per km of range (€) — combines affordability and range; lower is better |
 | `0-100` | Acceleration 0–100 km/h (seconds) |
 | `Top_speed` | Top speed (km/h) |
 | `Range` | Estimated real-world range (km) |
