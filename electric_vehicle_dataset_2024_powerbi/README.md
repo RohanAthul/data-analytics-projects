@@ -128,4 +128,4 @@ ev-powerbi-dashboard
 ## 🙋 Author
 
 Built by **Athul Rohan** as part of a data analytics portfolio.  
-Data from Kaggle: https://www.kaggle.com/datasets/urvishahir/electric-vehicle-specifications-dataset-2025
+Data from Kaggle: https://www.kaggle.com/datasets/vanillatyy1/electric-vehicle-dataset
