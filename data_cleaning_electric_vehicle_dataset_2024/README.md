@@ -1,49 +1,54 @@
-# Data Cleaning Pipeline - Electric Vehicle Dataset 2024 
+# Data Cleaning Pipeline - Electric Vehicle Dataset 2024
+This project focuses on the rigorous cleaning and preprocessing of a raw web-scraped dataset containing detailed specifications and pricing information for Electric Vehicles (EVs) from April 2024. The goal is to transform messy, inconsistent raw data into a clean, structured, analysis-ready dataset suitable for exploratory data analysis (EDA), visualization, and predictive modeling.
+Dataset Details
 
-This project focuses on the rigorous cleaning and preprocessing of a raw dataset containing specifications and pricing for Electric Vehicles (EVs) available in 2024. The primary objective is to transform raw, unstructured web-scraped data into a clean, structured format suitable for downstream exploratory data analysis (EDA) and predictive modeling.
+Source: EV Database – April 2024
+Purpose: Strictly for educational and data-cleaning practice
+Raw Size: 351 rows × 16 columns
+Input File: cars_data_RAW.csv
+Output File: cars_data_cleaned.xlsx
+Kaggle Dataset: Electric Vehicle Dataset 2024
 
-### Dataset Details
-- Source: EV Database (Data acquired in April 2024)
+Tech Stack & Dependencies
 
-- Purpose: Strictly educational and data cleaning practice.
+Language: Python 3.x
+Core Library: pandas
+Utilities: pathlib, warnings, IPython.display
 
-- Size: 351 rows, 16 columns (pre-cleaning).
+Data Processing Pipeline
+The pipeline systematically handles data quality issues through the following stages:
 
-- Input File: cars_data_RAW.csv
+Column Standardization: Renamed all columns for clarity and consistency (e.g., title → Brand, price-range → RangeValue, Tow_Hitch → Towbar_possible).
+Numeric Data Cleaning: Stripped all non-numeric characters (symbols, text, whitespace) from numerical columns using regex and converted them to proper numeric types.
+Brand Standardization: Converted all brand names to uppercase.
+Missing Value Handling:
+Towbar_possible: Mapped to binary (1 = possible, 0 = not possible / missing).
+Towing_capacity_in_kg: Filled NaNs with 0.
+Fastcharge: Grouped median imputation (first by Brand + Battery, then by Brand, finally global median).
+Regional prices (Germany, Netherlands, UK): Cross-country imputation using calculated market price ratios (UK/DE, NL/DE, UK/NL) with Germany as the primary anchor.
 
-- Output File: cars_data_cleaned.xlsx (or .csv)
-- Link to the dataset:  
-    - https://www.kaggle.com/datasets/vanillatyy1/electric-vehicle-dataset/data
+Currency Standardization:
+Converted UK prices (after incentives) from GBP to EUR using 2024 exchange rate (1 GBP = 1.17 EUR).
+Created Approx_price_in_USD based on German price using 2024 exchange rate (1 EUR = 1.07 USD).
 
-### Tech Stack & Dependencies
-- Language: Python 3.x
+Data Type Optimization: Converted all appropriate columns to nullable integer type (Int64) after rounding.
+Column Reordering: Rearranged columns into logical groups:
+Identification
+Battery & Performance
+Utility & Interior
+Financials (standardized to EUR and USD)
 
-- Core Libraries: pandas
+Final Cleanup: Dropped the original GBP column and performed a final null check.
 
-- I/O & Utilities: pathlib, warnings, IPython.display
+Final Dataset
 
-### Data Processing Pipeline
-The pipeline systematically addresses inconsistencies, missing values, and formatting issues through the following stages:
+Cleaned size: 351 rows
+Fully imputed and standardized
+Ready for analysis
 
-- Feature Standardization: Column headers are renamed for programmatic consistency (e.g., price-range to KM_of_range, Tow_Hitch to Towbar_possible).
+How to Run
 
-- Regex Data Extraction: Non-numeric characters (currency symbols like £, €, textual tags like 'N/A', and whitespace) are stripped from numerical columns using regular expressions.
-
-- Currency Conversion: An Estimated_US_Value column is engineered by converting local prices to USD using specific exchange rates. A fallback logic (UK → Netherlands → Germany) ensures maximum data retention for missing price points.
-
-- Boolean & Categorical Cleaning: The Towbar_possible feature is mapped to a binary format (1 for possible, 0 for missing/not possible).
-
-- Grouped Statistical Imputation: Missing values in the Fastcharge column are imputed using the median of the respective Brand and Battery group. A cascading fallback fills remaining gaps using the Brand median, and finally, the global median.
-
-- Cross-Country Price Imputation: Missing regional prices (Germany, Netherlands, UK) are estimated using historical price ratios. Germany is used as the base anchor to calculate ratios (e.g., UK/DE, NL/DE) to intelligently fill missing pricing data based on available regional equivalents.
-
-- Data Type Optimization: Columns are cast to their appropriate types. Integer-based features are safely converted using the Pandas nullable integer type (Int64) to handle missing values without floating-point conversion errors.
-
-### How to Run
-- Ensure the raw data file is located at `./data/cars_data_RAW.csv.`
-
-- Install necessary dependencies via pip: `pip install`
-
-- Execute the script or run the Jupyter Notebook cells sequentially.
-
-- The cleaned dataset will be exported to the `./data/` directory as `cars_data_cleaned.xlsx`.
+Place the raw file at ./data/cars_data_RAW.csv
+(Optional) Install dependencies:Bashpip install pandas openpyxl
+Run the Jupyter Notebook (Electric_Vehicle_Data_Cleaning.ipynb) cell by cell.
+The cleaned dataset will be automatically saved in the ./data/ folder as cars_data_cleaned.xlsx.
