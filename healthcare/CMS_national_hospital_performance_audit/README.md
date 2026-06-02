@@ -59,11 +59,15 @@ Three analytical questions are answered with supporting charts and commentary:
 
 ## Key Findings
 
+<img width="1384" height="778" alt="image" src="https://github.com/user-attachments/assets/0fc272c4-34ab-40ba-8d20-d202df0ec0f9" />
+
 **1. The "Value" Quadrant is densely populated**
 Many hospitals — primarily Voluntary Non-Profit institutions — achieve *below-average spending and below-average complication rates* simultaneously, proving that high quality does not require high cost.
 
 **2. The "Worst" Quadrant exists**
 A meaningful cluster of hospitals, disproportionately represented by for-profit (Proprietary) facilities, combine *above-average spending with above-average complication rates* — the worst possible value outcome.
+
+<img width="1595" height="644" alt="image" src="https://github.com/user-attachments/assets/96613e40-7341-41d6-8fa9-8076d11bfcd3" />
 
 **3. Geographic polarization is stark**
 Using the composite ratio `MSPB_score × Complications_score` (higher = worse value):
