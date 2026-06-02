@@ -1,15 +1,23 @@
-# Data Analytics Projects
+# Data Analytics Projects 📊
 
-This repository contains my data analytics portfolio projects focused on business insights, sustainability, and real-world datasets.
+Welcome to my data analytics portfolio! This repository contains various projects where I apply data cleaning, exploratory data analysis (EDA), and visualization techniques to extract insights from real-world datasets.
 
-### . Renewable Energy Analysis
-- Tools: Python, Time Series
-- Description: Analysis of renewable energy share on grid
+## Projects
 
-## Skills Demonstrated
+| Project Name | Description | Tools Used |
+| :--- | :--- | :--- |
+| **[Healthcare Analysis](healthcare/CMS_national_hospital_performance/)** | Analysis of national hospital performance data. | Python, Pandas, Matplotlib, Seaborn |
+| **[Sustainability Energy](sustainability-energy/)** | Investigating energy consumption and sustainability trends. | Python, Seaborn, Scikit-learn |
 
-- Data Cleaning
-- Data Visualization
-- Exploratory Data Analysis
-- Business Insights
-- Dashboarding
+---
+
+## 🛠 Skills & Technologies
+* **Languages:** Python
+* **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+* **Tools:** Jupyter Notebooks, Git/GitHub, VS Code
+
+---
+
+## 📬 Contact
+* **LinkedIn:** www.linkedin.com/in/rohan-athul
+* **Email:** athulrohanar@outlook.com
