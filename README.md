@@ -6,7 +6,7 @@ Welcome to my data analytics portfolio! This repository contains various project
 
 | Project Name | Description | Tools Used |
 | :--- | :--- | :--- |
-| **[Healthcare Analysis](healthcare/CMS_national_hospital_performance/)** | Analysis of national hospital performance data. | Python, Pandas, Matplotlib, Seaborn |
+| **[Healthcare](healthcare/CMS_national_hospital_performance/)** | Analysis of national hospital performance data. | Python, Pandas, Matplotlib, Seaborn |
 | **[Sustainability Energy](sustainability-energy/)** | Investigating energy consumption and sustainability trends. | Python, Seaborn, Scikit-learn |
 
 ---
